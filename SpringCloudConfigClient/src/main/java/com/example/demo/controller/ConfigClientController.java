@@ -12,9 +12,13 @@ public class ConfigClientController {
 	@Value("${eureka.client.service-url.defaultZone}")
 	private String defaultZone;
 	
+	@Value("${my.app.title}")
+	private String title;
+	
+	
 	@GetMapping("/get")
 	public String getInfo() {
-		String res = "Response from Config Client. value from github for eureka.client.service-url.defaultZone: "+ defaultZone;
+		String res = "Response from Config Client.with app name as"+ title +" and value from github for eureka.client.service-url.defaultZone: "+ defaultZone;
 		return res;
 	}
 }
