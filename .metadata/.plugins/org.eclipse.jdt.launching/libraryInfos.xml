@@ -11,5 +11,6 @@
             <entry path="null"/>
         </endorsedDirs>
     </libraryInfo>
+    <libraryInfo home="C:\Prasad\Software\jdk\jdk-17.0.12" version="17.0.12"/>
     <libraryInfo home="C:\Prasad\Software\eclipse-jee-2024-06-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\jre" version="21.0.6"/>
 </libraryInfos>
