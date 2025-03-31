@@ -11,7 +11,10 @@ public class MyRoutingConfig {
 	@Bean
 	public RouteLocator configureRoute(RouteLocatorBuilder builder) {
 		return builder.routes()
-		.route("ServiceName1", r -> r.path("/v1/api/mapping1/**").uri("lb://Service-Id1"))
+		.route("ServiceName1", r -> r.path("/v1/api/mapping1/**")
+				.filters(f->f.addRequestHeader("key", "value")
+								.addResponseHeader("key", "value"))
+				.uri("lb://Service-Id1"))
 		.route("ServiceName2", r -> r.path("/v1/api/mapping2/**").uri("lb://Service-Id2"))
 		.build();
 	}
